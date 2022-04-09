@@ -27,6 +27,7 @@ Chang-Bin Zhang<sup>1</sup>, Jia-Wen Xiao<sup>1</sup>, Xialei Liu<sup>1</sup>, Y
 
 
 ## Update
+- Coming Soon add data folder
 - Coming Soon init code for Classification
 - Coming Soon add training scripts for ADE20K and cityscapes
 - ~~09/04/2022 init code for segmentation~~
@@ -149,6 +150,8 @@ If you have any questions about this work, please feel easy to connect with us (
 
 ## Thanks
 This code is heavily borrowed from [[MiB]](https://github.com/fcdl94/MiB) and [[PLOP]](https://github.com/arthurdouillard/CVPR2021_PLOP).
+
+
 
 
 ## Awesome Continual Segmentation
