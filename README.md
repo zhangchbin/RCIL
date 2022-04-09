@@ -27,7 +27,10 @@ Chang-Bin Zhang<sup>1</sup>, Jia-Wen Xiao<sup>1</sup>, Xialei Liu<sup>1</sup>, Y
 
 
 ## Update
-- 09/04/2022 init readme
+- Coming Soon init code for Classification
+- Coming Soon add training scripts for ADE20K and cityscapes
+- ~~09/04/2022 init code for segmentation~~
+- ~~09/04/2022 init readme~~
 
 
 
@@ -112,14 +115,16 @@ There are some settings reported in our paper. You can also try it on other any 
 
 ## Training
 1. Dowload pretrained model from [ResNet-101_iabn](https://github.com/arthurdouillard/CVPR2021_PLOP/releases/download/v1.0/resnet101_iabn_sync.pth.tar) to ```pretrained/```
-2. 
-
-
-
-
+2. We have prepared some training scripts in ```scripts/```. You can train the model by
+```
+sh scripts/voc/rcil_10-1-overlap.sh
+```
 
 ## Inference
-
+You can simply modify the bash file by add ```--test```, like
+```
+CUDA_VISIBLE_DEVICES=${GPU} python3 -m torch.distributed.launch --master_port ${PORT} --nproc_per_node=${NB_GPU} run.py --data xxx ... --test
+```
 
 
 
@@ -137,7 +142,8 @@ If this work is useful for you, please cite us by:
 }
 ```
 
-
+## Connect
+If you have any questions about this work, please feel easy to connect with us (zhangchbin ^ gmail.com).
 
 
 
