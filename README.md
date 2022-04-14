@@ -160,7 +160,7 @@ There is a collection of AWESOME things about continual semantic segmentation, i
 ### 2022
 - Representation Compensation Networks for Continual Semantic Segmentation [[CVPR 2022]](https://arxiv.org/abs/2203.05402) [[PyTorch]](https://github.com/zhangchbin/RCIL)
 - Self-training for Class-incremental Semantic Segmentation [[TNNLS 2022]](https://arxiv.org/abs/2012.03362) [PyTorch]
-
+- Uncertainty-aware Contrastive Distillation for Incremental Semantic Segmentation [[TPAMI 2022]](https://arxiv.org/pdf/2203.14098.pdf) [[PyTorch]]
 
 
 ### 2021
