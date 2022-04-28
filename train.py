@@ -25,8 +25,8 @@ def features_distillation8(
     nb_new_classes=1
 ):
     loss = torch.tensor(0.).to(list_attentions_a[0].device)
-    list_attentions_a = list_attentions_a[:-1]
-    list_attentions_b = list_attentions_b[:-1]
+    # list_attentions_a = list_attentions_a[:-1]
+    # list_attentions_b = list_attentions_b[:-1]
     for i, (a, b) in enumerate(zip(list_attentions_a, list_attentions_b)):
         n, c, h, w = a.shape
         layer_loss = torch.tensor(0.).to(a.device)
@@ -82,8 +82,8 @@ def features_distillation_channel(
     nb_new_classes=1
 ):
     loss = torch.tensor(0.).to(list_attentions_a[0].device)
-    list_attentions_a = list_attentions_a[:-2]
-    list_attentions_b = list_attentions_b[:-2]
+    list_attentions_a = list_attentions_a[:-1]
+    list_attentions_b = list_attentions_b[:-1]
     for i, (a, b) in enumerate(zip(list_attentions_a, list_attentions_b)):
         n, c, h, w = a.shape
         layer_loss = torch.tensor(0.).to(a.device)
