@@ -122,7 +122,7 @@ sh scripts/voc/rcil_10-1-overlap.sh
 ```
 
 ## Inference
-You can simply modify the bash file by add ```--test```, like
+You can simply modify the bash file by adding ```--test```, like
 ```
 CUDA_VISIBLE_DEVICES=${GPU} python3 -m torch.distributed.launch --master_port ${PORT} --nproc_per_node=${NB_GPU} run.py --data xxx ... --test
 ```
@@ -135,16 +135,17 @@ CUDA_VISIBLE_DEVICES=${GPU} python3 -m torch.distributed.launch --master_port ${
 ## Reference
 If this work is useful for you, please cite us by:
 ```
-@inproceedings{zhangCvpr22ContinuSSeg,
+@inproceedings{zhang2022representation,
   title={Representation Compensation Networks for Continual Semantic Segmentation},
-  author={Chang-Bin Zhang and Jiawen Xiao and Xialei Liu and Yingcong Chen and Ming-Ming Cheng},
-  booktitle={IEEE Conference on Computer Vision and Pattern Recognition},
+  author={Zhang, Chang-Bin and Xiao, Jia-Wen and Liu, Xialei and Chen, Ying-Cong and Cheng, Ming-Ming},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  pages={7053--7064},
   year={2022}
 }
 ```
 
 ## Connect
-If you have any questions about this work, please feel easy to connect with us (zhangchbin ^ gmail.com).
+If you have any questions about this work, please feel easy to connect with us (zhangchbin ^ mail.nankai.edu.cn or zhangchbin ^ gmail.com).
 
 
 
