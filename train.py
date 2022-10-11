@@ -22,7 +22,7 @@ def features_distillation_channel(
     list_attentions_b,
     index_new_class=16,
     nb_current_classes=16,
-    nb_new_classes=1，
+    nb_new_classes=1,
     opts=None
 ):
     loss = torch.tensor(0.).to(list_attentions_a[0].device)
@@ -51,14 +51,16 @@ def features_distillation_channel(
                 pckd_factor = 5e-7
             elif opts.dataset == "voc":
                 pckd_factor = 0.0005
+            elif opts.dataset == 'cityscapes_domain':
+                pckd_factor = 0.
         else:
             if opts.dataset == "ade":
                 pckd_factor = 5e-6
             elif opts.dataset == "voc":
                 pckd_factor = 0.01
+            elif opts.dataset == 'cityscapes_domain':
+                pckd_factor = 0.0001
 
-        # pod_factor = 0.01 # cityscapes
-        # pod_factor = 0.01 #voc
         loss = loss + layer_loss.mean() * 1.0 * math.sqrt(nb_current_classes / nb_new_classes) * pckd_factor
 
 
@@ -111,19 +113,19 @@ def features_distillation_spatial(
             
 
         if i == len(list_attentions_a) - 1:
-            # pod_factor = 0.0001 # cityscapes
-            # pod_factor = 0.0005 # voc
             if opts.dataset == "ade":
                 pckd_factor = 5e-7
             elif opts.dataset == "voc":
                 pckd_factor = 0.0005
+            elif opts.dataset == "cityscapes_domain":
+                pckd_factor = 1e-4
         else:
-            # pod_factor = 0.0005 # cityscapes
-            # pod_factor = 0.01 # voc
             if opts.dataset == "ade":
                 pckd_factor = 5e-6
             elif opts.dataset == "voc":
                 pckd_factor = 0.01
+            elif opts.dataset == "cityscapes_domain":
+                pckd_factor = 5e-4
       
         loss = loss + layer_loss.mean() * 1.0 * math.sqrt(nb_current_classes / nb_new_classes) * pckd_factor
 
