@@ -139,7 +139,7 @@ class IncrementalSegmentationModule(nn.Module):
 
         if opts.dataset == "cityscapes_domain":
             classes = [opts.num_classes]
-
+        self.opts = opts
         self.cls = nn.ModuleList([nn.Conv2d(head_channels, c, 1, bias=use_bias) for c in classes])
         self.classes = classes
         self.head_channels = head_channels
@@ -244,22 +244,24 @@ class IncrementalSegmentationModule(nn.Module):
             bkg_bias = self.cls[0].bias.sum(dim=0)
         else:
             imprinting_w = self.cls[0].weight[0]
-        #     if not self.use_cosine:
-        #         bkg_bias = self.cls[0].bias[0]
-
-        # if not self.use_cosine:
-        #     bias_diff = torch.log(torch.FloatTensor([self.classes[-1] + 1])).to(device)
-        #     new_bias = (bkg_bias - bias_diff)
+            if self.opts.dataset == "cityscapes_domain":
+                if not self.use_cosine:
+                    bkg_bias = self.cls[0].bias[0]
+        if self.opts.dataset == "cityscapes_domain":
+            if not self.use_cosine:
+                bias_diff = torch.log(torch.FloatTensor([self.classes[-1] + 1])).to(device)
+                new_bias = (bkg_bias - bias_diff)
 
         cls.weight.data.copy_(imprinting_w)
-        # if not self.use_cosine:
-        #     cls.bias.data.copy_(new_bias)
+        if self.opts.dataset == "cityscapes_domain":
+            if not self.use_cosine:
+                cls.bias.data.copy_(new_bias)
 
-        # if self.multi_modal_background:
-        #     self.cls[0].bias.data.copy_(new_bias.squeeze(0))
-        # else:
-        #     if not self.use_cosine:
-        #         self.cls[0].bias[0].data.copy_(new_bias.squeeze(0))
+            if self.multi_modal_background:
+                self.cls[0].bias.data.copy_(new_bias.squeeze(0))
+            else:
+                if not self.use_cosine:
+                    self.cls[0].bias[0].data.copy_(new_bias.squeeze(0))
 
     def init_new_classifier_multimodal(self, device, train_loader, init_type):
         print("Init new multimodal classifier")
