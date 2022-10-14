@@ -14,7 +14,7 @@ NB_GPU=4
 DATA_ROOT=/media/ssd/plop/data/cityscapes_domain/
 
 DATASET=cityscapes_domain
-TASK=11-1
+TASK=1-1
 NAME=RCIL
 METHOD=FT
 OPTIONS="--checkpoint checkpoints/cityscapes-ours/ --pod local --pod_factor 0.0001 --pod_logits"
