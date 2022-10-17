@@ -70,7 +70,7 @@ def get_argparser():
     # Performance Options
     parser.add_argument("--local_rank", type=int, default=0)
     parser.add_argument("--random_seed", type=int, default=42, help="random seed (default: 42)")
-    parser.add_argument("--num_workers", type=int, default=1, help='number of workers (default: 1)')
+    parser.add_argument("--num_workers", type=int, default=4, help='number of workers (default: 1)')
 
     # Datset Options
     parser.add_argument("--data_root", type=str, default='data', help="path to Dataset")
@@ -92,7 +92,7 @@ def get_argparser():
         "--method",
         type=str,
         default=None,
-        choices=['FT', 'LWF', 'LWF-MC', 'ILT', 'EWC', 'RW', 'PI', 'MiB', 'PLOP'],
+        choices=['FT', 'RCIL'],
         help="The method you want to use. BE CAREFUL USING THIS, IT MAY OVERRIDE OTHER PARAMETERS."
     )
 
