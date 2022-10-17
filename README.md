@@ -144,8 +144,8 @@ If this work is useful for you, please cite us by:
 }
 ```
 
-## Connect
-If you have any questions about this work, please feel easy to connect with us (zhangchbin ^ mail.nankai.edu.cn or zhangchbin ^ gmail.com).
+## Contact
+If you have any questions about this work, please feel easy to contact us (zhangchbin ^ mail.nankai.edu.cn or zhangchbin ^ gmail.com).
 
 
 
