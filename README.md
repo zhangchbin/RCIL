@@ -66,14 +66,14 @@ There are some settings reported in our paper. You can also try it on other any 
 ## Performance 
 - Continual Class Segmentation on PASCAL VOC 2012
 
-| Method | Pub.       | 15-5 disjoint | 15-5 overlapped | 15-1 disjoint | 15-1 overlapped | 10-1 disjoint | 10-1 overlapped |
-| ------ | ---------- | ------------- | --------------- | ------------- | --------------- | ------------- | --------------- |
-| LWF    | TPAMI 2017 | 54.9          | 55.0            | 5.3           | 5.5             | 4.3           | 4.8             |
-| ILT    | ICCVW 2019 | 58.9          | 61.3            | 7.9           | 9.2             | 5.4           | 5.5             |
-| MiB    | CVPR 2020  | 65.9          | 70.0            | 39.9          | 32.2            | 6.9           | 20.1            |
-| SDR    | CVPR 2021  | 67.3          | 70.1            | 48.7          | 39.5            | 14.3          | 25.1            |
-| PLOP   | CVPR 2021  | 64.3          | 70.1            | 46.5          | 54.6            | 8.4           | 30.5            |
-| Ours   | CVPR 2022  | 67.3          | 72.4            | 54.7          | 59.4            | 18.2          | 34.3            |
+| Method | Pub.       | 15-5 disjoint | 15-5 overlapped | 15-1 disjoint | 15-1 overlapped | 10-1 disjoint | 10-1 overlapped | 5-3 overlapped | 5-3 disjoint | 
+| ------ | ---------- | ------------- | --------------- | ------------- | --------------- | ------------- | --------------- | -------------- | ------------ |
+| LWF    | TPAMI 2017 | 54.9          | 55.0            | 5.3           | 5.5             | 4.3           | 4.8             |                |              |
+| ILT    | ICCVW 2019 | 58.9          | 61.3            | 7.9           | 9.2             | 5.4           | 5.5             |                |              |
+| MiB    | CVPR 2020  | 65.9          | 70.0            | 39.9          | 32.2            | 6.9           | 20.1            |                |              |
+| SDR    | CVPR 2021  | 67.3          | 70.1            | 48.7          | 39.5            | 14.3          | 25.1            |                |              |
+| PLOP   | CVPR 2021  | 64.3          | 70.1            | 46.5          | 54.6            | 8.4           | 30.5            |                |              |
+| Ours   | CVPR 2022  | 67.3          | 72.4            | 54.7          | 59.4            | 18.2          | 34.3            | 42.88          |              |
 
 
 - Continual Class Segmentation on ADE20K
