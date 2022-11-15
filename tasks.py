@@ -213,8 +213,16 @@ tasks_ade = {
 }
 
 
+tasks_cityscape = {
+    "10-9":
+    {
+        0: [x for x in range(0, 11)],
+        1: [x for x in range(11, 20)]
+    }
+}
+
 def get_task_list():
-    return list(tasks_voc.keys()) + list(tasks_ade.keys()) + list(tasks_cityscapes_domain.keys())
+    return list(tasks_voc.keys()) + list(tasks_ade.keys()) + list(tasks_cityscapes_domain.keys()) + list(tasks_cityscape.keys())
 
 
 def get_task_labels(dataset, name, step):
@@ -224,6 +232,8 @@ def get_task_labels(dataset, name, step):
         task_dict = tasks_ade[name]
     elif dataset == "cityscapes_domain":
         task_dict = tasks_cityscapes_domain[name]
+    elif dataset == 'cityscape':
+        task_dict = tasks_cityscape[name]
     else:
         raise NotImplementedError
     assert step in task_dict.keys(), f"You should provide a valid step! [{step} is out of range]"
@@ -240,6 +250,8 @@ def get_per_task_classes(dataset, name, step):
         task_dict = tasks_ade[name]
     elif dataset == "cityscapes_domain":
         task_dict = tasks_cityscapes_domain[name]
+    elif dataset == "cityscape":
+        task_dict = tasks_cityscape[name]
     else:
         raise NotImplementedError
     assert step in task_dict.keys(), f"You should provide a valid step! [{step} is out of range]"
