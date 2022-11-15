@@ -13,7 +13,7 @@ def modify_command_options(opts):
         opts.num_classes = 17
     elif opts.dataset == "cityscapes_domain":
         opts.num_classes = 19
-    elif opts.dataset == "cityscapes_classdomain":
+    elif opts.dataset == 'cityscape':
         opts.num_classes = 19
     else:
         raise NotImplementedError(f"Unknown dataset: {opts.dataset}")
