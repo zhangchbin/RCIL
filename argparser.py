@@ -78,7 +78,7 @@ def get_argparser():
         "--dataset",
         type=str,
         default='voc',
-        choices=['voc', 'ade', 'cityscapes_domain'],
+        choices=['voc', 'ade', 'cityscapes_domain', 'cityscape'],
         help='Name of dataset'
     )
     parser.add_argument("--num_classes", type=int, default=None, help="num classes (default: None)")
