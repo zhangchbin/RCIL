@@ -27,9 +27,10 @@ Chang-Bin Zhang<sup>1</sup>, Jia-Wen Xiao<sup>1</sup>, Xialei Liu<sup>1</sup>, Y
 
 
 ## Update
+- ~~Support CIL on cityscapes dataset~~
 - init code for Classification
 - ~~We have fixed bugs in the repository~~
-- ~~add training scripts for ADE20K~~
+- ~~Add training scripts for ADE20K~~
 - ~~09/04/2022 init code for segmentation~~
 - ~~09/04/2022 init readme~~
 
