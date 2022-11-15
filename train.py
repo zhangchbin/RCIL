@@ -49,14 +49,14 @@ def features_distillation_channel(
         if i == len(list_attentions_a) - 1:
             if opts.dataset == "ade":
                 pckd_factor = 5e-7
-            elif opts.dataset == "voc":
+            elif opts.dataset == "voc" or opts.dataset == 'cityscape':
                 pckd_factor = 0.0005
             elif opts.dataset == 'cityscapes_domain':
                 pckd_factor = 0.
         else:
             if opts.dataset == "ade":
                 pckd_factor = 5e-6
-            elif opts.dataset == "voc":
+            elif opts.dataset == "voc" or opts.dataset == "cityscape":
                 pckd_factor = 0.01
             elif opts.dataset == 'cityscapes_domain':
                 pckd_factor = 0.0001
@@ -115,14 +115,14 @@ def features_distillation_spatial(
         if i == len(list_attentions_a) - 1:
             if opts.dataset == "ade":
                 pckd_factor = 5e-7
-            elif opts.dataset == "voc":
+            elif opts.dataset == "voc" or opts.dataset == 'cityscape':
                 pckd_factor = 0.0005
             elif opts.dataset == "cityscapes_domain":
                 pckd_factor = 1e-4
         else:
             if opts.dataset == "ade":
                 pckd_factor = 5e-6
-            elif opts.dataset == "voc":
+            elif opts.dataset == "voc" or opts.dataset == 'cityscape':
                 pckd_factor = 0.01
             elif opts.dataset == "cityscapes_domain":
                 pckd_factor = 5e-4
