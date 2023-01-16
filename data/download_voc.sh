@@ -13,4 +13,4 @@ wget http://cs.jhu.edu/~cxliu/data/list.zip
 unzip SegmentationClassAug.zip
 unzip SegmentationClassAug_Visualization.zip
 unzip list.zip
-mv list splits
+cp -r list splits
