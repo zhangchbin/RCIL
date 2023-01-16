@@ -83,7 +83,7 @@ class VOCSegmentation(data.Dataset):
         # REMOVE FIRST SLASH OTHERWISE THE JOIN WILL start from root
         self.images = [
             (
-                os.path.join(voc_root, "VOCdevkit/VOC2012",
+                os.path.join(voc_root,
                              x[0][1:]), os.path.join(voc_root, x[1][1:])
             ) for x in file_names
         ]
