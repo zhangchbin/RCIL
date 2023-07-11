@@ -26,7 +26,7 @@ Chang-Bin Zhang<sup>1</sup>, Jia-Wen Xiao<sup>1</sup>, Xialei Liu<sup>1</sup>, Y
 <img width="1230" alt="截屏2022-04-09 上午1 02 44" src="https://user-images.githubusercontent.com/35215543/162488465-73c56e73-8d5b-4406-941f-85497673c419.png">
 
 ## News
-- Our method RCIL has been re-implemented in the framework 🔥🔥🔥 [[CSSegmentation]]. 
+- Our method RCIL has been re-implemented in the framework 🔥🔥🔥 [[CSSegmentation]](https://github.com/SegmentationBLWX/cssegmentation). 
 
 ## Update
 - ~~Support CIL on cityscapes dataset~~
