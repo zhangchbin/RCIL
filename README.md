@@ -22,13 +22,14 @@ Chang-Bin Zhang<sup>1</sup>, Jia-Wen Xiao<sup>1</sup>, Xialei Liu<sup>1</sup>, Y
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/representation-compensation-networks-for/overlapped-10-1-on-pascal-voc-2012)](https://paperswithcode.com/sota/overlapped-10-1-on-pascal-voc-2012?p=representation-compensation-networks-for)
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/representation-compensation-networks-for/overlapped-15-5-on-pascal-voc-2012)](https://paperswithcode.com/sota/overlapped-15-5-on-pascal-voc-2012?p=representation-compensation-networks-for)
 
-## Method
-<img width="1230" alt="截屏2022-04-09 上午1 02 44" src="https://user-images.githubusercontent.com/35215543/162488465-73c56e73-8d5b-4406-941f-85497673c419.png">
-
 ## News
-- <font color=red> Our work can be reproduced with high version pytorch after fixing [the issue](https://github.com/mapillary/inplace_abn/issues/219) caused by InplaceABNSync. Please refer to [our modification](https://github.com/zhangchbin/RCIL/blob/main/segmentation_module.py#L21). Thanks to Zhengyuan and Jiawen</font>
+- **Our work can be reproduced with high version pytorch after fixing [the issue](https://github.com/mapillary/inplace_abn/issues/219) caused by InplaceABNSync. Please refer to [our modification](https://github.com/zhangchbin/RCIL/blob/main/segmentation_module.py#L21). 😃😃😃Thanks to Zhengyuan and Jiawen.**
 - Our another work [[EWF]](https://github.com/schuy1er/EWF_official) has been accepted to CVPR 2023.
 - Our method RCIL has been re-implemented in the framework 🔥🔥🔥 [[CSSegmentation]](https://github.com/SegmentationBLWX/cssegmentation). 
+
+
+## Method
+<img width="1230" alt="截屏2022-04-09 上午1 02 44" src="https://user-images.githubusercontent.com/35215543/162488465-73c56e73-8d5b-4406-941f-85497673c419.png">
 
 ## Update
 - ~~Support CIL on cityscapes dataset~~
@@ -114,7 +115,7 @@ There are some settings reported in our paper. You can also try it on other any 
 
 
 ## Environment
-1. ```conda install --yes --file requirements.txt```
+1. ```conda install --yes --file requirements.txt```  (Higher version pytorch should be suitable.)
 2. Install [inplace-abn](https://github.com/mapillary/inplace_abn)
 
 
