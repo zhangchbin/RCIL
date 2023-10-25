@@ -18,7 +18,7 @@ from modules import DeeplabV3
 def make_model(opts, classes=None):
     if opts.norm_act == 'iabn_sync':
          ### xjw fixed
-        norm = partial(InPlaceABNSync, activation="leaky_relu", activation_param=1.)
+        norm = partial(InPlaceABNSync, activation="leaky_relu", activation_param=1., group=distributed.group.WORLD)
     elif opts.norm_act == 'iabn':
         norm = partial(InPlaceABN, activation="leaky_relu", activation_param=.01)
     elif opts.norm_act == 'abn':
